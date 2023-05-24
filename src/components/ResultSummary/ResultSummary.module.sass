@@ -1,0 +1,39 @@
+$white: hsl(0, 0%, 100%)
+$dark-grey-blue: hsl(224, 30%, 27%)
+$light-lavendar: hsl(241, 100%, 89%)
+    
+.testing 
+    color: red
+
+.header 
+    color: $white
+    height: 40vh
+    border: 1px blue solid
+    border-radius: 0 0 30px 30px
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%))
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    justify-content: space-around
+    padding: 1.5em 2em
+    & p
+        margin: 5px
+        font-size: 18px
+        color: $light-lavendar
+    & h1
+        font-size: 3em
+    & h3
+        color: $light-lavendar
+
+.headerResults 
+    border-radius: 50%
+    aspect-ratio: 1/1
+    padding: 1.5em 2em
+    background-image: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1))
+    
+.contentContainer
+    // background-color: black
+    // display: flex
+    // flex-direction: column
+    // align-items: center
