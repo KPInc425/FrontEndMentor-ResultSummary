@@ -19,7 +19,7 @@ const ResultSummary = () => {
             </div>
             <div className={styles.contentContainer}>
                 <h2>Summary</h2>
-                <ResultBadge badgeColor={'hsl(0, 100%, 67%)'} category={'Reaction'} score={'80'} icon={'./assets/images/icon-reaction.svg'} />
+                <ResultBadge badgeColor={'hsl(0, 100%, 67%)'} category={'Reaction'} score={'80'} icon={'./src/assets/images/icon-reaction.svg'} />
                 Reaction
                 80 / 100
 

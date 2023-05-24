@@ -1,3 +1,4 @@
+@use '../../styles/colorVariableMixin.sass' as theme
 .badgeContainer
     width: 85vw
     border-radius: 5px
@@ -6,12 +7,21 @@
     margin: 0 auto
     justify-content: space-between
     padding: 12px
+    color: theme.$dark-grey-blue
 
-.flex
+.categoryContainer
     display: flex
     // width: 50%
+    gap: 15px
 
 .iconImage
     aspect-ratio: 1/1
     border-radius: 50%
     // margin: 10px
+
+.label
+    align-self: center
+    font-weight: bolder
+
+.totalFade
+    color: grey

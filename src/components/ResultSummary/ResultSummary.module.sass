@@ -1,12 +1,10 @@
-$white: hsl(0, 0%, 100%)
-$dark-grey-blue: hsl(224, 30%, 27%)
-$light-lavendar: hsl(241, 100%, 89%)
-    
+@use '../../styles/colorVariableMixin.sass' as theme
+
 .testing 
     color: red
 
 .header 
-    color: $white
+    color: theme.$white
     height: 40vh
     border: 1px blue solid
     border-radius: 0 0 30px 30px
@@ -20,11 +18,11 @@ $light-lavendar: hsl(241, 100%, 89%)
     & p
         margin: 5px
         font-size: 18px
-        color: $light-lavendar
+        color: theme.$light-lavendar
     & h1
         font-size: 3em
     & h3
-        color: $light-lavendar
+        color: theme.$light-lavendar
 
 .headerResults 
     border-radius: 50%
@@ -32,8 +30,3 @@ $light-lavendar: hsl(241, 100%, 89%)
     padding: 1.5em 2em
     background-image: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1))
     
-.contentContainer
-    // background-color: black
-    // display: flex
-    // flex-direction: column
-    // align-items: center
