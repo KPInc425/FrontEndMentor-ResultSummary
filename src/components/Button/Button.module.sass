@@ -1,0 +1,16 @@
+@use '../../styles/colorVariables.sass' as theme
+    
+.buttonStyle
+    width: 100%
+    margin: 0 auto
+    height: 55px
+    border-radius: 24px
+    border: none
+    margin-top: 15px
+    color: theme.$pale-blue
+    font-weight: bold
+    background-color: theme.$dark-grey-blue
+    font-size: 18px
+    &:hover 
+        cursor: pointer
+        background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%))

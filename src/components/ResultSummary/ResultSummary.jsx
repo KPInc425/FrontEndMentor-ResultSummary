@@ -1,10 +1,16 @@
+import Button from '../Button/Button'
 import ResultBadge from '../ResultBadge/ResultBadge'
 import styles from './ResultSummary.module.sass'
-
-const ResultSummary = () => {
-    console.log(styles.testing)
+import { useEffect, useState } from 'react'
+const ResultSummary = ({ resultData }) => {
+    const [results, setResults] = useState([])
+    useEffect(() => {
+      fetch('./src/data.json')
+      .then(r => r.json())
+      .then(data => setResults(data))
+    }, [])
     return (
-        <>
+        <div className={styles.mainContainer}>
             <div className={styles.header}>
                 <h3>Your Result</h3>
                 <div className={styles.headerResults}>
@@ -18,24 +24,19 @@ const ResultSummary = () => {
                 <p>You scored higher than 65% of the people who have taken these tests.</p>
             </div>
             <div className={styles.contentContainer}>
-                <h2>Summary</h2>
-                <ResultBadge badgeColor={'hsl(0, 100%, 67%)'} category={'Reaction'} score={'80'} icon={'./src/assets/images/icon-reaction.svg'} />
-                Reaction
-                80 / 100
-
-                Memory
-                92 / 100
-
-                Verbal
-                61 / 100
-
-                Visual
-                72 / 100
-
-                Continue
+                <div className={styles.resultsContainer} >
+                    <h3>Summary</h3>
+                    {  results && results.map((result, index) => {
+                            return (
+                                <ResultBadge key={index} badgeColor={result.color} category={result.category} score={result.score} icon={result.icon} />
+                            )
+                        })
+                    }
+                    <Button label="Continue" />
+                </div>
             </div>
 
-        </>
+        </div>
     )
 }
 

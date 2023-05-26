@@ -5,14 +5,14 @@ import { useState } from 'react'
 const ResultBadge = ({ category, score, icon, badgeColor }) => {
     const [lightColor, setLightColor] = useState('')
     useEffect(() => {
-        lightenColor(badgeColor, 95)
+        lightenColor(badgeColor, 97)
     }, [])
     const lightenColor = (color, percent) => {
         const hslRegex = /hsl\(\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*\)/;
-        console.log(color)
-        console.log(hslRegex)
+        // console.log(color)
+        // console.log(hslRegex)
         const lightColor = color.match(hslRegex)
-        console.log(lightColor)
+        // console.log(lightColor)
         if (lightColor) {
             const hue = lightColor[1]
             const saturation = lightColor[2]

@@ -1,13 +1,33 @@
-@use '../../styles/colorVariableMixin.sass' as theme
+@use '../../styles/colorVariables.sass' as theme
 
-.testing 
-    color: red
+.mainContainer
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 50%
+    // border: 1px solid black
+    border-radius: 30px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    box-shadow: 15px 15px 155px theme.$light-lavendar
+    @media (max-width: 1024px)
+        width: 70%
+    @media (max-width: 768px)
+        position: relative
+        display: flex
+        flex-direction: column
+        width: 100%
+        top: 0
+        left: 0
+        transform: translate(0, 0)
+        box-shadow: none
 
 .header 
     color: theme.$white
-    height: 40vh
-    border: 1px blue solid
-    border-radius: 0 0 30px 30px
+    min-height: 40vh
+    // border: 1px blue solid
+    border-radius: 30px
     background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%))
     display: flex
     flex-direction: column
@@ -21,12 +41,32 @@
         color: theme.$light-lavendar
     & h1
         font-size: 3em
+    & h2
+        font-size: 1.75em
     & h3
         color: theme.$light-lavendar
+    @media (max-width: 768px)
+        width: 100%
+        border-radius: 0 0 30px 30px
 
 .headerResults 
     border-radius: 50%
     aspect-ratio: 1/1
-    padding: 1.5em 2em
     background-image: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1))
-    
+    padding: 2.5em 2em
+    @media (max-width: 768px)
+        padding: 1.5em 2.5em   
+
+.resultsContainer
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+    gap: 15px
+    margin: 0 auto
+    padding: 35px 25px
+    color: theme.$dark-grey-blue
+    & h3
+        padding: 0.5em 0 0.5em 0
+    @media (max-width: 768px)
+        padding: 15px
+        width: 85%

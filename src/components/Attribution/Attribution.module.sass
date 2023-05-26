@@ -1,0 +1,17 @@
+@use '../../styles/colorVariables.sass' as theme
+.attribution
+    position: fixed  
+    font-size: 11px 
+    bottom: 10px
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    color: theme.$desaturated-blue
+    & a  
+        color: hsl(228, 45%, 44%)
+        text-decoration: none
+        text-transform: uppercase
+    @media (max-width: 768px)
+        position: relative
+        font-size: 8px
+        margin: 10px auto
