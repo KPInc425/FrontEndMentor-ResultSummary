@@ -9,10 +9,7 @@ const ResultBadge = ({ category, score, icon, badgeColor }) => {
     }, [])
     const lightenColor = (color, percent) => {
         const hslRegex = /hsl\(\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*\)/;
-        // console.log(color)
-        // console.log(hslRegex)
         const lightColor = color.match(hslRegex)
-        // console.log(lightColor)
         if (lightColor) {
             const hue = lightColor[1]
             const saturation = lightColor[2]
@@ -22,7 +19,6 @@ const ResultBadge = ({ category, score, icon, badgeColor }) => {
         return console.error('Invalid color or percentage')
     }
     return (
-        // <div style={{backgroundColor: badgeColor}} className={styles.badgeContainer}>
         <div style={{backgroundColor: lightColor}} className={styles.badgeContainer}>
             <div className={styles.categoryContainer}>
                 <img src={icon} className={styles.iconImage}/>
