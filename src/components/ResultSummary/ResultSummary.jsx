@@ -5,9 +5,10 @@ import { useEffect, useState } from 'react'
 const ResultSummary = ({ resultData }) => {
     const [results, setResults] = useState([])
     useEffect(() => {
-      fetch('./src/data.json')
+      fetch('data.json')
       .then(r => r.json())
       .then(data => setResults(data))
+      .then(console.log(results))
     }, [])
     return (
         <div className={styles.mainContainer}>
