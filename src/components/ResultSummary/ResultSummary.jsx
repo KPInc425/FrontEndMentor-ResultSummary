@@ -8,7 +8,7 @@ const ResultSummary = ({ resultData }) => {
       fetch('data.json')
       .then(r => r.json())
       .then(data => setResults(data))
-      .then(console.log(results))
+    //   .then(console.log(results))
     }, [])
     return (
         <div className={styles.mainContainer}>
